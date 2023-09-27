@@ -37,7 +37,7 @@ function adicionaLinha(){
     
     inputNomeAtividade.value='';
     inputNotaAtividade.value= '';
-    
+
     }
 }
 
@@ -47,17 +47,10 @@ function atualizaTabela(){
 }
 
 function atualizaMediaFinal(){
-let somaDasNotas = 0;
-
-for (let i = 0; i < notas.length; i++){
-    somaDasNotas += notas[i]; 
-}
-
-const media = somaDasNotas / notas.length;
 
     const mediaFinal = calculaMediaFinal();
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(1);
     document.getElementById('media-final-resultado').innerHTML = mediaFinal > 7 ? spanAprovado : spanReprovado;
 
 }
